@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum JavaScript</title>
+</head>
+<body>
+    <h2>Praktikum Basic JavaScript</h2>
+    <p>Lihat hasil melalui console (f12)</p>
+
+    <script>
+        const nama = "alya";
+        let umur = 19;
+        let nilai = 85;
+        let aktif = true;
+
+        console.log("Nama:", nama);
+        console.log("Umur:", umur);
+        console.log("Nilai:", nilai);
+        console.log("Status aktif", aktif);
+        console.log("Tipe nilai", typeof nilai);
+
+        const tugas = 80;
+        const uts = 75;
+        const uas = 90;
+        const akhir = tugas * 0.30 + uts * 0.30 + uas * 0.30 * 0.40;
+
+        console.log("Nilai akhir:", akhir);
+        console.log("Lulus:", akhir >=60);
+
+        // const nilai = 78;
+        let katagori;
+        if (nilai >= 85){
+            katagori = "A";
+        } else if (nilai >= 70){
+            katagori = "B";
+        } else if (nilai >= 60){
+            katagori = "C";
+        } else {
+            katagori = "D";
+        }
+
+        console.log("Nilai", nilai);
+        console.log("Katagori", katagori);
+
+        function hitungDiskon(harga, persen){
+            return harga - (harga * persen / 100);
+        }
+
+        for (let i = 1; i <= 3; i++){
+            const harga = i * 10000;
+            const bayar = hitungDiskon(harga, 10);
+            console.log("Barang", i, "Harga:", harga, "Bayar:", bayar);
+        }
+
+
+// PRAKTIKUM MANDIRI PENGOLAH NILAI MAHASISWA
+
+const namaMahasiswa = "Nasywah Rasyadah";
+
+const nilaiTugas = 80;
+const nilaiUTS = 70;
+const nilaiUAS = 90;
+
+const nilaiAkhir = (nilaiTugas * 0.30) +
+                   (nilaiUTS * 0.30) +
+                   (nilaiUAS * 0.40);
+
+let statusKelulusan;
+
+if (nilaiAkhir >= 60) {
+    statusKelulusan = "LULUS";
+} else {
+    statusKelulusan = "TIDAK LULUS";
+}
+
+console.log("Nama Mahasiswa:", namaMahasiswa);
+console.log("Nilai Akhir:", nilaiAkhir);
+console.log("Status Kelulusan:", statusKelulusan);
+
+    </script>
+</body>
+</html>
